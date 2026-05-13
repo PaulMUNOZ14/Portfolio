@@ -53,3 +53,40 @@ sliders.forEach(slider => {
   });
 
 });
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+const themeToggle = document.getElementById("theme-toggle");
+
+/* Chargement thème sauvegardé */
+
+if (localStorage.getItem("theme") === "light") {
+
+  document.body.classList.add("light-theme");
+  themeToggle.textContent = "🌙";
+
+}
+
+/* Toggle */
+
+themeToggle.addEventListener("click", () => {
+
+  document.body.classList.toggle("light-theme");
+
+  const isLight = document.body.classList.contains("light-theme");
+
+  if (isLight) {
+
+    localStorage.setItem("theme", "light");
+    themeToggle.textContent = "🌙";
+
+  } else {
+
+    localStorage.setItem("theme", "dark");
+    themeToggle.textContent = "☀️";
+
+  }
+
+});
