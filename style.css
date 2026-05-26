@@ -336,3 +336,86 @@ body {
   .solid-grid { grid-template-columns: 1fr; }
   .hero-name { font-size: 2.5rem; }
 }
+
+/* =========================
+   CORRECTIONS DE HAUTEUR DU VSCODE(PAGE 3)
+========================= */
+#projects {
+  height: auto;
+  min-height: 100vh;
+}
+
+.projects-ide {
+  height: auto !important; 
+  max-height: none !important;
+}
+
+.projects-ide .ide-body {
+  overflow: visible !important;
+}
+
+.projects-ide .ide-content {
+  overflow-y: visible !important;
+  height: auto !important;
+}
+
+
+/* =========================
+   EFFET PHOTOSHOP (PAGE 1)
+========================= */
+#hero {
+  position: relative;
+}
+
+.photoshop-transform-box {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  border: 1px dashed #4f9cf9; /* pointillé */
+  background: rgba(79, 156, 249, 0.03);
+  padding: 18px 32px;
+  transform: rotate(-8deg); /* penché */
+  z-index: 10;
+  pointer-events: none;
+  user-select: none;
+  animation: floatEffect 6s ease-in-out infinite;
+}
+
+.ps-text {
+  font-family: var(--font-sans);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+/* les rectangles qui redimensionnent là */
+.ps-handle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border: 1px solid #4f9cf9;
+}
+
+/* les 8 trucs aux quatre coins et milieux du rectangle */
+.tl { top: -4px; left: -4px; }
+.tm { top: -4px; left: calc(50% - 3px); }
+.tr { top: -4px; right: -4px; }
+.lm { top: calc(50% - 3px); left: -4px; }
+.rm { top: calc(50% - 3px); right: -4px; }
+.bl { bottom: -4px; left: -4px; }
+.bm { bottom: -4px; left: calc(50% - 3px); }
+.br { bottom: -4px; right: -4px; }
+
+@keyframes floatEffect {
+  0%, 100% { transform: rotate(-8deg) translateY(0px); }
+  50% { transform: rotate(-6deg) translateY(-10px); }
+}
+
+@media (max-width: 1024px) {
+  .photoshop-transform-box {
+    display: none;
+  }
+}
