@@ -1,284 +1,150 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Portfolio - Paul MUNOZ</title>
-
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paul MUNOZ — Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
+  <section id="hero" class="fullscreen-section ide-bg">
+    <div class="ide-window hero-ide">
+      <div class="ide-header">
+        <div class="ide-controls">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="ide-title">Visualisateur de code</div>
+        <div class="ide-spacer"></div>
+      </div>
+      
+      <div class="ide-body">
+        <div class="ide-sidebar">
+          <div class="sidebar-title">EXPLORATEUR</div>
+          <div class="sidebar-item active">📝 intro.txt</div>
+        </div>
+        <div class="ide-editor">
+          <div class="ide-tabs">
+            <div class="tab active">intro.txt</div>
+          </div>
+          <div class="ide-content center-content">
+            <p class="comment">// Portfolio 2026</p>
+            <h1 class="hero-name">Paul MUNOZ</h1>
+            <h2 class="hero-role">Développeur Informatique</h2>
+            <p class="hero-sub">Étudiant BUT Informatique · Caen</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="logo">
-            Paul MUNOZ
+  <section id="about" class="fullscreen-section solid-bg">
+    <div class="solid-container">
+      <div class="solid-header">
+        <h2>Profil & Contact</h2>
+      </div>
+      <div class="solid-grid">
+        <div class="solid-text">
+          <p>
+            Passionné par le développement logiciel et les systèmes informatiques, je réalise régulièrement des projets autour des applications interactives et du scripting. 
+          </p>
+          <p>
+            Mon projet de jeu vidéo a remporté le <strong>Prix du meilleur projet NSI de Normandie</strong>, et j'ai eu l'opportunité de participer au déploiement de serveurs Linux lors d'un stage au CNRS / GANIL.
+          </p>
+        </div>
+        
+        <div class="solid-skills">
+          <h3>Compétences</h3>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">JUnit</span>
+            <span class="tag">Python</span>
+            <span class="tag">C</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Algorithmes IA (Minimax)</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Git</span>
+          </div>
         </div>
 
-        <nav class="nav-right">
-            <a href="#home">Accueil</a>
-            <a href="#about">À propos</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <button id="theme-toggle" class="theme-toggle">
-            ☀️
-        </button>
-
-    </header>
-
-    <!-- HERO -->
-    <section id="home" class="hero">
-
-        <h1>Portfolio</h1>
-
-        <p>Développeur informatique</p>
-
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-        <h2>À propos</h2>
-
-        <div class="card about-card">
-
-            <p>
-                Je suis actuellement étudiant en <strong>BUT Informatique</strong>
-                à l’IUT Grand Ouest Normandie à Caen.
-                Passionné par le développement logiciel, les systèmes informatiques
-                et les technologies web, je réalise régulièrement des projets personnels
-                autour du développement, des serveurs et des applications interactives.
-            </p>
-
-            <p>
-                Au fil de mon parcours, j’ai acquis de l’expérience aussi bien
-                en programmation qu’en administration système, notamment lors
-                d’un stage au <strong>CNRS / GANIL</strong> où j’ai participé au
-                déploiement de serveurs et à la remise en état de plusieurs postes
-                sous Linux destinés à des établissements scolaires et hospitaliers.
-            </p>
-
-            <p>
-                J’ai également participé à plusieurs concours informatiques comme
-                <strong>Algoréa</strong>, les <strong>Trophées NSI</strong>
-                ainsi qu’une compétition Scratch en équipe.
-                Mon projet de jeu vidéo développé en Python et SQL a remporté
-                le <strong>Prix du meilleur projet NSI de Normandie</strong>
-                en Terminale.
-            </p>
-
-            <p>
-                Aujourd’hui, je cherche à continuer à progresser à travers
-                des projets concrets dans le développement logiciel,
-                le web et les systèmes informatiques.
-            </p>
-
-            <div class="skills">
-
-                <h3>Compétences</h3>
-
-                <ul>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>C</li>
-                    <li>SQL</li>
-                    <li>Git</li>
-                    <li>Linux</li>
-                    <li>Visual Studio Code</li>
-                    <li>Eclipse IDE</li>
-                </ul>
-
-            </div>
-
-            <a class="cv-button" href="cv.pdf" target="_blank">
-                Voir mon CV
-            </a>
-
+        <div class="solid-contact">
+          <h3>Travaillons ensemble</h3>
+          <a href="mailto:paul.munoz@etu.unicaen.fr" class="contact-link">paul.munoz@etu.unicaen.fr</a>
+          <a href="tel:0652509335" class="contact-link">06 52 50 93 35</a>
+          <div class="social-links">
+            <a href="https://github.com/PaulMUNOZ14" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/paul-munoz-6b205b3a9/" target="_blank">LinkedIn</a>
+            <a href="cv.pdf" target="_blank">CV</a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-
-        <h2>Projets</h2>
-
-        <div class="projects-list">
-
-            <!-- PROJECT 1 -->
-            <div class="project-card">
-
-                <div class="project-slider">
-
-                    <button class="slider-btn prev">&#10094;</button>
-
-                    <img src="img/astrogame1.jpg" class="slide active" alt="">
-                    <img src="img/astrogame2.jpg" class="slide" alt="">
-                    <img src="img/astrogame3.jpg" class="slide" alt="">
-
-                    <button class="slider-btn next">&#10095;</button>
-
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
-                </div>
-
-                <div class="project-info">
-
-                    <h3>Astrogame</h3>
-
-                    <p>
-                        Jeu interactif développé en JavaScript avec différentes mécaniques
-                        de gameplay et animations.
-                    </p>
-
-                    <a href="https://github.com/PaulMUNOZ14/Astrogame" target="_blank">
-                        Voir sur GitHub
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- PROJECT 2 -->
-            <div class="project-card">
-
-                <div class="project-slider">
-
-                    <button class="slider-btn prev">&#10094;</button>
-
-                    <img src="img/mimesis1.jpg" class="slide active" alt="">
-                    <img src="img/mimesis2.jpg" class="slide" alt="">
-                    <img src="img/mimesis3.jpg" class="slide" alt="">
-
-                    <button class="slider-btn next">&#10095;</button>
-
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
-                </div>
-
-                <div class="project-info">
-
-                    <h3>Mimesis</h3>
-
-                    <p>
-                        Application web expérimentale orientée interface utilisateur
-                        et interactions dynamiques.
-                    </p>
-
-                    <a href="https://github.com/PaulMUNOZ14/Mimesis" target="_blank">
-                        Voir sur GitHub
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- PROJECT 3 -->
-            <div class="project-card">
-
-                <div class="project-slider">
-
-                    <button class="slider-btn prev">&#10094;</button>
-
-                    <img src="img/gribouille1.jpg" class="slide active" alt="">
-                    <img src="img/gribouille2.jpg" class="slide" alt="">
-                    <img src="img/gribouille3.jpg" class="slide" alt="">
-
-                    <button class="slider-btn next">&#10095;</button>
-
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
-                </div>
-
-                <div class="project-info">
-
-                    <h3>Gribouille</h3>
-
-                    <p>
-                        Projet créatif autour du dessin interactif et de l’expérimentation graphique.
-                    </p>
-
-                    <a href="https://github.com/PaulMUNOZ14/Gribouille" target="_blank">
-                        Voir sur GitHub
-                    </a>
-
-                </div>
-
-            </div>
-
+  <section id="projects" class="fullscreen-section ide-bg">
+    <div class="ide-window projects-ide">
+      <div class="ide-header">
+        <div class="ide-controls">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
         </div>
-
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-
-        <h2>Contact</h2>
-
-        <div class="card contact-card">
-
-            <p>
-                <strong>Email :</strong>
-                paul.munoz@etu.unicaen.fr
-            </p>
-
-            <p>
-                <strong>Téléphone :</strong>
-                06 52 50 93 35
-            </p>
-
-            <p>
-                <strong>Localisation :</strong>
-                Normandie, France
-            </p>
-
-            <div class="socials">
-
-                <a href="https://github.com/PaulMUNOZ14" target="_blank">
-                    GitHub
-                </a>
-
-                <a href="https://www.linkedin.com/in/paul-munoz-6b205b3a9/" target="_blank">
-                    LinkedIn
-                </a>
-
-                <a href="cv.pdf" target="_blank">
-                    Voir mon CV
-                </a>
-
+        <div class="ide-title">Mes_Projets</div>
+        <div class="ide-spacer"></div>
+      </div>
+      
+      <div class="ide-body">
+        <div class="ide-sidebar">
+          <div class="sidebar-title">EXPLORATEUR</div>
+          <div class="sidebar-item active" data-target="proj-astro">🎮 astrogame.js</div>
+          <div class="sidebar-item" data-target="proj-mimesis">🌐 mimesis.html</div>
+          <div class="sidebar-item" data-target="proj-gribouille">🎨 gribouille.exe</div>
+        </div>
+        <div class="ide-editor">
+          <div class="ide-tabs">
+            <div class="tab active" id="active-tab-name">astrogame.js</div>
+          </div>
+          
+          <div class="ide-content projects-content">
+            
+            <div id="proj-astro" class="project-pane active">
+              <h3>Astrogame</h3>
+              <p class="comment">// Jeu interactif développé en JavaScript avec différentes mécaniques de gameplay et animations.</p>
+              <div class="project-visual placeholder-astro">
+                <span>[Aperçu Astrogame]</span>
+              </div>
+              <a href="https://github.com/PaulMUNOZ14/Astrogame" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
             </div>
 
+            <div id="proj-mimesis" class="project-pane">
+              <h3>Mimesis</h3>
+              <p class="comment">&lt;!-- Application web expérimentale orientée interface utilisateur et interactions dynamiques. --&gt;</p>
+              <div class="project-visual placeholder-mimesis">
+                <span>[Aperçu Mimesis]</span>
+              </div>
+              <a href="https://github.com/PaulMUNOZ14/Mimesis" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
+            </div>
+
+            <div id="proj-gribouille" class="project-pane">
+              <h3>Gribouille</h3>
+              <p class="comment"># Projet créatif autour du dessin interactif et de l'expérimentation graphique.</p>
+              <p class="comment"># Package généré sous forme d'exécutable Windows (.exe) portable.</p>
+              <div class="project-visual placeholder-gribouille">
+                <span>[Aperçu Gribouille]</span>
+              </div>
+              <a href="https://github.com/PaulMUNOZ14/Gribouille" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
+            </div>
+
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-
-        <p>
-            © 2026 Paul MUNOZ - Tous droits réservés
-        </p>
-
-    </footer>
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
