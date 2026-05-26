@@ -14,9 +14,9 @@
     <div class="ide-window hero-ide">
       <div class="ide-header">
         <div class="ide-controls">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
+          <span class="window-dot red"></span>
+          <span class="window-dot yellow"></span>
+          <span class="window-dot green"></span>
         </div>
         <div class="ide-title">Visualisateur de code</div>
         <div class="ide-spacer"></div>
@@ -89,9 +89,9 @@
     <div class="ide-window projects-ide">
       <div class="ide-header">
         <div class="ide-controls">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
+          <span class="window-dot red"></span>
+          <span class="window-dot yellow"></span>
+          <span class="window-dot green"></span>
         </div>
         <div class="ide-title">Mes_Projets</div>
         <div class="ide-spacer"></div>
@@ -114,18 +114,44 @@
             <div id="proj-astro" class="project-pane active">
               <h3>Astrogame</h3>
               <p class="comment">// Jeu interactif développé en JavaScript avec différentes mécaniques de gameplay et animations.</p>
-              <div class="project-visual placeholder-astro">
-                <span>[Aperçu Astrogame]</span>
+              
+              <div class="project-slider" data-index="0">
+                <button class="slider-btn prev" aria-label="Précédent">&#10094;</button>
+                <div class="slides-track">
+                  <img src="img/astrogame1.jpg" class="slide active" alt="Astrogame capture 1">
+                  <img src="img/astrogame2.jpg" class="slide" alt="Astrogame capture 2">
+                  <img src="img/astrogame3.jpg" class="slide" alt="Astrogame capture 3">
+                </div>
+                <button class="slider-btn next" aria-label="Suivant">&#10095;</button>
+                <div class="slider-dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
               </div>
+
               <a href="https://github.com/PaulMUNOZ14/Astrogame" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
             </div>
 
             <div id="proj-mimesis" class="project-pane">
               <h3>Mimesis</h3>
               <p class="comment">&lt;!-- Application web expérimentale orientée interface utilisateur et interactions dynamiques. --&gt;</p>
-              <div class="project-visual placeholder-mimesis">
-                <span>[Aperçu Mimesis]</span>
+              
+              <div class="project-slider" data-index="0">
+                <button class="slider-btn prev" aria-label="Précédent">&#10094;</button>
+                <div class="slides-track">
+                  <img src="img/mimesis1.jpg" class="slide active" alt="Mimesis capture 1">
+                  <img src="img/mimesis2.jpg" class="slide" alt="Mimesis capture 2">
+                  <img src="img/mimesis3.jpg" class="slide" alt="Mimesis capture 3">
+                </div>
+                <button class="slider-btn next" aria-label="Suivant">&#10095;</button>
+                <div class="slider-dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
               </div>
+
               <a href="https://github.com/PaulMUNOZ14/Mimesis" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
             </div>
 
@@ -133,9 +159,22 @@
               <h3>Gribouille</h3>
               <p class="comment"># Projet créatif autour du dessin interactif et de l'expérimentation graphique.</p>
               <p class="comment"># Package généré sous forme d'exécutable Windows (.exe) portable.</p>
-              <div class="project-visual placeholder-gribouille">
-                <span>[Aperçu Gribouille]</span>
+              
+              <div class="project-slider" data-index="0">
+                <button class="slider-btn prev" aria-label="Précédent">&#10094;</button>
+                <div class="slides-track">
+                  <img src="img/gribouille1.jpg" class="slide active" alt="Gribouille capture 1">
+                  <img src="img/gribouille2.jpg" class="slide" alt="Gribouille capture 2">
+                  <img src="img/gribouille3.jpg" class="slide" alt="Gribouille capture 3">
+                </div>
+                <button class="slider-btn next" aria-label="Suivant">&#10095;</button>
+                <div class="slider-dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
               </div>
+
               <a href="https://github.com/PaulMUNOZ14/Gribouille" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
             </div>
 
@@ -144,6 +183,10 @@
       </div>
     </div>
   </section>
+
+  <footer class="footer">
+    <span class="footer-code">// © 2026 Paul MUNOZ — All rights reserved</span>
+  </footer>
 
   <script src="script.js"></script>
 </body>

@@ -16,8 +16,8 @@
   --ide-comment: #6a9955;
   --ide-border: #454545;
 
-  /* Couleur page unie */
-  --solid-bg: #2563eb; /* Un beau bleu franc */
+  /* Couleur page unie (Bleu très foncé style "Navy") */
+  --solid-bg: #0B1E40; 
   --solid-text: #ffffff;
 }
 
@@ -68,10 +68,10 @@ body {
 }
 
 .ide-controls { display: flex; gap: 8px; width: 60px; }
-.dot { width: 12px; height: 12px; border-radius: 50%; }
-.dot.red { background-color: #ff5f56; }
-.dot.yellow { background-color: #ffbd2e; }
-.dot.green { background-color: #27c93f; }
+.window-dot { width: 12px; height: 12px; border-radius: 50%; }
+.window-dot.red { background-color: #ff5f56; }
+.window-dot.yellow { background-color: #ffbd2e; }
+.window-dot.green { background-color: #27c93f; }
 
 .ide-title {
   flex: 1;
@@ -224,26 +224,76 @@ body {
 .social-links a:hover { background: rgba(255,255,255,0.2); }
 
 /* =========================
-   PROJETS (Page 3)
+   PROJETS & SLIDERS (Page 3)
 ========================= */
 .project-pane { display: none; animation: fadeIn 0.3s ease; }
 .project-pane.active { display: block; }
 
 .project-pane h3 { font-family: var(--font-sans); font-size: 2.5rem; color: #dcdcaa; margin-bottom: 10px; }
 
-.project-visual {
+/* Slider réintégré */
+.project-slider {
+  position: relative;
   width: 100%;
-  height: 250px;
-  background-color: #2d2d2d;
-  border: 1px dashed #555;
+  max-width: 750px;
+  aspect-ratio: 16/9;
+  background: #111;
+  overflow: hidden;
   border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
-  color: #777;
+  border: 1px solid var(--ide-border);
+  margin: 24px 0;
 }
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.slide.active { opacity: 1; }
 
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 5;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+  opacity: 0;
+}
+.project-slider:hover .slider-btn { opacity: 1; }
+.slider-btn:hover { background: rgba(255,255,255,0.2); }
+.prev { left: 12px; }
+.next { right: 12px; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  z-index: 5;
+}
+.dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.dot.active { background: #fff; transform: scale(1.3); }
+
+/* Bouton GitHub */
 .ide-btn {
   display: inline-block;
   background-color: var(--ide-accent);
@@ -258,6 +308,21 @@ body {
 .ide-btn:hover { background-color: #005f9e; }
 
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* =========================
+   FOOTER COPYRIGHT
+========================= */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background-color: #0d1117;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.footer-code {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #6e7681;
+}
 
 /* =========================
    RESPONSIVE
