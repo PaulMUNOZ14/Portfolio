@@ -1,92 +1,31 @@
-const sliders = document.querySelectorAll(".project-slider");
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // Récupération des éléments du DOM
+  const sidebarItems = document.querySelectorAll('#projects .sidebar-item');
+  const projectPanes = document.querySelectorAll('.project-pane');
+  const activeTabName = document.getElementById('active-tab-name');
 
-sliders.forEach(slider => {
+  // Logique du Toggle des projets (Style Editeur de texte)
+  sidebarItems.forEach(item => {
+    item.addEventListener('click', () => {
+      
+      // 1. Retirer la classe 'active' de tous les éléments de la barre latérale
+      sidebarItems.forEach(el => el.classList.remove('active'));
+      
+      // 2. Ajouter la classe 'active' à l'élément cliqué
+      item.classList.add('active');
+      
+      // 3. Mettre à jour le nom dans l'onglet supérieur de l'éditeur
+      const fileName = item.textContent.replace(/[🎮🌐🎨]/g, '').trim(); 
+      activeTabName.textContent = fileName;
 
-  const slides = slider.querySelectorAll(".slide");
-  const dots = slider.querySelectorAll(".dot");
+      // 4. Masquer tous les projets
+      projectPanes.forEach(pane => pane.classList.remove('active'));
 
-  const prevBtn = slider.querySelector(".prev");
-  const nextBtn = slider.querySelector(".next");
-
-  let current = 0;
-
-  function showSlide(index) {
-
-    slides.forEach(slide => {
-      slide.classList.remove("active");
+      // 5. Afficher le projet correspondant à l'attribut data-target
+      const targetId = item.getAttribute('data-target');
+      document.getElementById(targetId).classList.add('active');
     });
-
-    dots.forEach(dot => {
-      dot.classList.remove("active");
-    });
-
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
-
-    current = index;
-  }
-
-  nextBtn.addEventListener("click", () => {
-
-    let index = (current + 1) % slides.length;
-
-    showSlide(index);
-
   });
-
-  prevBtn.addEventListener("click", () => {
-
-    let index = (current - 1 + slides.length) % slides.length;
-
-    showSlide(index);
-
-  });
-
-  dots.forEach((dot, index) => {
-
-    dot.addEventListener("click", () => {
-
-      showSlide(index);
-
-    });
-
-  });
-
-});
-
-/* =========================
-   THEME TOGGLE
-========================= */
-
-const themeToggle = document.getElementById("theme-toggle");
-
-/* Chargement thème sauvegardé */
-
-if (localStorage.getItem("theme") === "light") {
-
-  document.body.classList.add("light-theme");
-  themeToggle.textContent = "🌙";
-
-}
-
-/* Toggle */
-
-themeToggle.addEventListener("click", () => {
-
-  document.body.classList.toggle("light-theme");
-
-  const isLight = document.body.classList.contains("light-theme");
-
-  if (isLight) {
-
-    localStorage.setItem("theme", "light");
-    themeToggle.textContent = "🌙";
-
-  } else {
-
-    localStorage.setItem("theme", "dark");
-    themeToggle.textContent = "☀️";
-
-  }
 
 });
