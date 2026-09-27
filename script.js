@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.add('active');
       
       // Mettre à jour le nom dans l'onglet
-      const fileName = item.textContent.replace(/[🎮🌐🎨]/g, '').trim(); 
+      const fileName = item.textContent.replace(/[🎮🎮🎨]/g, '').trim(); 
       activeTabName.textContent = fileName;
 
       // Masquer tous les projets

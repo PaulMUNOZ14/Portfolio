@@ -154,7 +154,7 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.hero-name { font-family: var(--font-sans); font-size: 4rem; font-weight: 800; color: #fff; line-height: 1.1; }
+.hero-name { font-family: var(--font-sans); font-size: 6rem; font-weight: 800; color: #fff; line-height: 1.1; }
 .hero-role { font-family: var(--font-mono); font-size: 1.5rem; color: #4ec9b0; margin-bottom: 10px; }
 .hero-sub { color: #ce9178; font-size: 1rem; }
 
