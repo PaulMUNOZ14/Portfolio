@@ -1,238 +1,303 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio de Paul MUNOZ, étudant en BUT Informatique.">
   <title>Paul MUNOZ - Developpeur Informatique</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;700&display=swap">
+  </noscript>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <!-- CSS minifié pour la performance -->
+  <style>
+    .ide-bg,body{background-color:#0d1117}.ide-body,.ide-window{display:flex;overflow:hidden}.ide-title,.sidebar-title,body{font-family:var(--font-sans)}#hero,.project-slider{position:relative}*,::after,::before{margin:0;padding:0;box-sizing:border-box}:root{--font-sans:'Outfit',sans-serif;--font-mono:'JetBrains Mono',monospace;--ide-bg:#1e1e1e;--ide-header:#323233;--ide-sidebar:#252526;--ide-text:#cccccc;--ide-accent:#007acc;--ide-comment:#6a9955;--ide-border:#454545;--solid-bg:#0B1E40;--solid-text:#ffffff}body{color:#fff;overflow-x:hidden}.fullscreen-section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px}.solid-bg{background-color:var(--solid-bg);color:var(--solid-text)}.ide-window{width:100%;max-width:1100px;height:80vh;background-color:var(--ide-bg);border-radius:10px;border:1px solid var(--ide-border);box-shadow:0 25px 50px -12px rgba(0,0,0,.5);flex-direction:column}.ide-header{height:40px;background-color:var(--ide-header);display:flex;align-items:center;padding:0 16px;border-bottom:1px solid var(--ide-border)}.ide-controls{display:flex;gap:8px;width:60px}.window-dot{width:12px;height:12px;border-radius:50%}.window-dot.red{background-color:#ff5f56}.window-dot.yellow{background-color:#ffbd2e}.window-dot.green{background-color:#27c93f}.ide-title{flex:1;text-align:center;font-size:.85rem;color:#d4d4d4}.ide-spacer{width:60px}.ide-body{flex:1}.ide-sidebar{width:250px;background-color:var(--ide-sidebar);border-right:1px solid var(--ide-border);padding:16px 0}.sidebar-title{font-size:.7rem;color:#b0b0b0;padding:0 16px 8px;letter-spacing:1px}.sidebar-item,.tab{font-size:.85rem;font-family:var(--font-mono)}.sidebar-item{display:block;width:100%;text-align:left;background:0 0;border:none;color:var(--ide-text);padding:6px 16px;cursor:pointer;transition:background .2s}.ide-tabs,.tab{background-color:var(--ide-sidebar)}.sidebar-item:hover{background-color:rgba(255,255,255,.05)}.sidebar-item.active{background-color:rgba(255,255,255,.1);color:#fff;border-left:2px solid var(--ide-accent)}.ide-editor{display:flex;flex-direction:column;flex:1}.ide-tabs{display:flex;border-bottom:1px solid var(--ide-border)}.tab{color:#b0b0b0;padding:10px 20px;border-right:1px solid var(--ide-border)}.tab.active{background-color:var(--ide-bg);color:#fff;border-top:1px solid var(--ide-accent)}.ide-content{flex:1;padding:40px;overflow-y:auto;font-family:var(--font-mono)}.comment{color:var(--ide-comment);margin-bottom:12px}.center-content{display:flex;flex-direction:column;justify-content:center}.hero-name{font-family:var(--font-sans);font-size:6rem;font-weight:800;color:#fff;line-height:1.1}.contact-link,.hero-role,.tag{font-family:var(--font-mono)}.hero-role{font-size:1.5rem;color:#4ec9b0;margin-bottom:10px}.hero-sub{color:#ce9178;font-size:1rem}.solid-container{max-width:1000px;width:100%;margin:0 auto}.solid-header h2{font-size:3.5rem;font-weight:800;margin-bottom:40px;letter-spacing:-1px}.ide-btn,.social-links a{color:#fff;text-decoration:none;font-weight:600}.solid-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;font-size:1.1rem;line-height:1.6}.solid-text p{margin-bottom:20px;opacity:.9}.solid-contact h3,.solid-skills h3{font-size:1.5rem;margin-bottom:20px;border-bottom:2px solid rgba(255,255,255,.2);padding-bottom:10px;display:inline-block}.tags{display:flex;flex-wrap:wrap;gap:10px}.contact-link,.project-pane.active{display:block}.tag{background:rgba(255,255,255,.15);padding:6px 14px;border-radius:20px;font-size:.85rem}.contact-link{color:#fff;text-decoration:none;margin-bottom:10px;transition:opacity .2s}.ide-btn,.project-pane h3{font-family:var(--font-sans)}.contact-link:hover{opacity:.7}.social-links{display:flex;gap:15px;margin-top:20px}.social-links a{border:1px solid rgba(255,255,255,.4);padding:8px 16px;border-radius:6px;transition:background .2s}.slider-btn:hover,.social-links a:hover{background:rgba(255,255,255,.2)}.skill-icons img{width:100%;max-width:100%;height:auto}.project-pane{display:none;animation:.3s fadeIn}.project-pane h3{font-size:2.5rem;color:#dcdcaa;margin-bottom:10px}.project-slider{width:100%;max-width:750px;aspect-ratio:16/9;background:#111;overflow:hidden;border-radius:6px;border:1px solid var(--ide-border);margin:24px 0}.ps-handle,.slide,.slider-btn,.slider-dots{position:absolute}.slide{inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}.project-slider:hover .slider-btn,.slide.active{opacity:1}.slider-btn{top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:none;background:rgba(0,0,0,.55);color:#fff;font-size:1.2rem;cursor:pointer;z-index:5;backdrop-filter:blur(4px);transition:background .2s;opacity:0}.dot,.slider-dots .dot::after{background:rgba(255,255,255,.4);transition:.2s}.prev{left:12px}.next{right:12px}.slider-dots{bottom:0;width:100%;display:flex;justify-content:center;gap:0;z-index:5}.bl,.bm,.br{bottom:-4px}.dot{width:6px;height:6px;border-radius:50%;cursor:pointer}.dot.active,.slider-dots .dot.active::after{background:#fff;transform:scale(1.3)}.ide-btn{display:inline-block;background-color:var(--ide-accent);padding:10px 20px;border-radius:4px;transition:background .2s}.ide-btn:hover{background-color:#005f9e}@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}.footer{padding:30px;text-align:center;background-color:#0d1117;border-top:1px solid rgba(255,255,255,.05)}.footer-code{font-family:var(--font-mono);font-size:.85rem;color:#aeb6c2}@media (max-width:768px){.ide-body{flex-direction:column}.ide-sidebar{width:100%;border-right:none;border-bottom:1px solid var(--ide-border);display:flex;overflow-x:auto;padding:0}.sidebar-title{display:none}.sidebar-item{white-space:nowrap;border-left:none!important;border-bottom:2px solid transparent}.sidebar-item.active{border-bottom:2px solid var(--ide-accent)}.solid-grid{grid-template-columns:1fr}.hero-name{font-size:2.5rem}}#projects{height:auto;min-height:100vh}.projects-ide{height:auto!important;max-height:none!important}.projects-ide .ide-body{overflow:visible!important}.projects-ide .ide-content{overflow-y:visible!important;height:auto!important}.photoshop-transform-box{position:absolute;top:15%;right:10%;border:1px dashed #4f9cf9;background:rgba(79,156,249,.03);padding:18px 32px;transform:rotate(-8deg);z-index:10;pointer-events:none;user-select:none;animation:6s ease-in-out infinite floatEffect}.tl,.tm,.tr{top:-4px}.br,.rm,.tr{right:-4px}.ps-text{font-family:var(--font-sans);font-size:2.2rem;font-weight:900;letter-spacing:4px;text-transform:uppercase;padding:5px 10px}.ps-handle{width:7px;height:7px;background:#fff;border:1px solid #4f9cf9}.tl{left:-4px}.tm{left:calc(50% - 3px)}.bl,.lm{left:-4px}.lm,.rm{top:calc(50% - 3px)}.bm{left:calc(50% - 3px)}.slider-dots .dot{display:flex;align-items:center;justify-content:center;width:48px;height:48px;padding:0;border:0;background:0 0;appearance:none;cursor:pointer}.slider-dots .dot::after{content:"";display:block;width:8px;height:8px;border-radius:50%}.slider-btn:focus-visible,.slider-dots .dot:focus-visible .dot:focus-visible::after{outline:#fff solid 2px;outline-offset:3px}@keyframes floatEffect{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-6deg) translateY(-10px)}}@media (max-width:1024px){.photoshop-transform-box{display:none}}
+  </style>
 </head>
 <body>
-
-  <section id="hero" class="fullscreen-section ide-bg">
-    <div class="photoshop-transform-box">
-      <span class="ps-handle tl"></span>
-      <span class="ps-handle tm"></span>
-      <span class="ps-handle tr"></span>
-      <span class="ps-handle lm"></span>
-      <span class="ps-handle rm"></span>
-      <span class="ps-handle bl"></span>
-      <span class="ps-handle bm"></span>
-      <span class="ps-handle br"></span>
-      <div class="ps-text">Développeur en devenir</div>
-    </div>
-
-    <div class="ide-window hero-ide">
-      <div class="ide-header">
-        <div class="ide-controls">
-          <span class="window-dot red"></span>
-          <span class="window-dot yellow"></span>
-          <span class="window-dot green"></span>
-        </div>
-        <div class="ide-title">Visualisateur de code</div>
-        <div class="ide-spacer"></div>
+  <main>
+    <section id="hero" class="fullscreen-section ide-bg">
+      <div class="photoshop-transform-box">
+        <span class="ps-handle tl"></span>
+        <span class="ps-handle tm"></span>
+        <span class="ps-handle tr"></span>
+        <span class="ps-handle lm"></span>
+        <span class="ps-handle rm"></span>
+        <span class="ps-handle bl"></span>
+        <span class="ps-handle bm"></span>
+        <span class="ps-handle br"></span>
+        <div class="ps-text">Développeur en devenir</div>
       </div>
-      
-      <div class="ide-body">
-        <div class="ide-sidebar">
-          <div class="sidebar-title">EXPLORATEUR</div>
-          <div class="sidebar-item active">📝 intro.txt</div>
-        </div>
-        <div class="ide-editor">
-          <div class="ide-tabs">
-            <div class="tab active">intro.txt</div>
+
+      <div class="ide-window hero-ide">
+        <div class="ide-header">
+          <div class="ide-controls">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
           </div>
-          <div class="ide-content center-content">
-            <p class="comment">// Portfolio</p>
-            <h1 class="hero-name">Paul MUNOZ</h1>
-            <h2 class="hero-role">Futur développeur informatique</h2>
-            <p class="hero-sub">Étudiant BUT Informatique · Caen</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="fullscreen-section solid-bg">
-    <div class="solid-container">
-      <div class="solid-header">
-        <h2>Profil & Contact</h2>
-      </div>
-      <div class="solid-grid">
-        <div class="solid-text">
-          <p>
-            Je suis actuellement étudiant en BUT Informatique à Caen. J'aime surtout apprendre en faisant : coder un petit projet,
-            tester une idée, chercher pourquoi quelque chose ne fonctionne pas et finir par trouver une solution.
-          </p>
-
-          <p>
-            Je m'intéresse principalement au développement logiciel, mais aussi aux jeux vidéo, aux systèmes et
-            aux bases de données. J'ai eu l'occasion de travailler avec divers languages de programmations et sous
-            différents systèmes d'exploitations notamment en Java, C, Python, SQL, PHP avec Linux et Windows,
-            aussi bien dans le cadre de mes études que sur des projets personnels.
-          </p>
-
-          <p>
-            J'ai notamment participé à la création de <strong>Mimesis Museum</strong>, un jeu réalisé avec deux camarades
-            dans le cadre des Trophées NSI. Le projet a remporté le <strong>prix du meilleur projet de Normandie dans la catégorie Terminale</strong>.
-          </p>
-
-          <p>
-            Je continue aujourd'hui à développer mes compétences à travers mes études et différents projets, avec l'envie de découvrir
-            de nouvelles technologies et surtout de continuer à créer des choses qui me plaisent.
-          </p>
+          <div class="ide-title">Visualisateur de code</div>
+          <div class="ide-spacer"></div>
         </div>
         
-        <div class="solid-skills">
-          <h3>Compétences</h3>
-          <div class="tags">
-            <span class="tag">Java</span>
-            <span class="tag">C</span>
-            <span class="tag">Python</span>
-            <span class="tag">SQL</span>
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JS</span>
-            <span class="tag">PHP</span>
-            <span class="tag">JavaFX</span>
-            <span class="tag">JUnit</span>
-            <span class="tag">PL/SQL</span>
-            <span class="tag">Linux</span>
-            <span class="tag">Git</span>
+        <div class="ide-body">
+          <div class="ide-sidebar">
+            <div class="sidebar-title">EXPLORATEUR</div>
+            <div class="sidebar-item active">📝 intro.txt</div>
           </div>
-
-          <br><br>
-          <h4>Technologies que j'utilise</h4>
-          <br>
-
-          <div class="skill-icons">
-            <a href="https://skillicons.dev" target="_blank">
-              <img src="https://skillicons.dev/icons?i=python,java,c,html,css,js,php,md,mysql,git,vscode,eclipse,idea,windows,linux,arch,ubuntu,github&perline=6" alt="Technologies utilisées">
-            </a>
-          </div>
-        </div>
-
-        <div class="solid-contact">
-          <h3>Travaillons ensemble</h3>
-          <a href="mailto:paul.munoz@etu.unicaen.fr" class="contact-link">paul.munoz@etu.unicaen.fr</a>
-          <a href="tel:0652509335" class="contact-link">06 52 50 93 35</a>
-          <div class="social-links">
-            <a href="https://github.com/PaulMUNOZ14" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/paul-munoz-6b205b3a9/" target="_blank">LinkedIn</a>
-            <a href="CV Paul MUNOZ.pdf" target="_blank">CV</a>
+          <div class="ide-editor">
+            <div class="ide-tabs">
+              <div class="tab active">intro.txt</div>
+            </div>
+            <div class="ide-content center-content">
+              <p class="comment">// Portfolio</p>
+              <h1 class="hero-name">Paul MUNOZ</h1>
+              <h2 class="hero-role">Futur développeur informatique</h2>
+              <p class="hero-sub">Étudiant BUT Informatique · Caen</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="fullscreen-section ide-bg">
-    <div class="ide-window projects-ide">
-      <div class="ide-header">
-        <div class="ide-controls">
-          <span class="window-dot red"></span>
-          <span class="window-dot yellow"></span>
-          <span class="window-dot green"></span>
+    <section id="about" class="fullscreen-section solid-bg">
+      <div class="solid-container">
+        <div class="solid-header">
+          <h2>Profil & Contact</h2>
         </div>
-        <div class="ide-title">Mes_Projets</div>
-        <div class="ide-spacer"></div>
-      </div>
-      
-      <div class="ide-body">
-        <div class="ide-sidebar">
-          <div class="sidebar-title">EXPLORATEUR</div>
-          <div class="sidebar-item active" data-target="proj-astro">🎮 astrogame.py</div>
-          <div class="sidebar-item" data-target="proj-mimesis">🎮 mimesis.py</div>
-          <div class="sidebar-item" data-target="proj-gribouille">🎨 gribouille.java</div>
-        </div>
-        <div class="ide-editor">
-          <div class="ide-tabs">
-            <div class="tab active" id="active-tab-name">astrogame.py</div>
+        <div class="solid-grid">
+          <div class="solid-text">
+            <p>
+              Je suis actuellement étudiant en BUT Informatique à Caen. J'aime surtout apprendre en faisant : coder un petit projet,
+              tester une idée, chercher pourquoi quelque chose ne fonctionne pas et finir par trouver une solution.
+            </p>
+
+            <p>
+              Je m'intéresse principalement au développement logiciel, mais aussi aux jeux vidéo, aux systèmes et
+              aux bases de données. J'ai eu l'occasion de travailler avec divers languages de programmations et sous
+              différents systèmes d'exploitations notamment en Java, C, Python, SQL, PHP avec Linux et Windows,
+              aussi bien dans le cadre de mes études que sur des projets personnels.
+            </p>
+
+            <p>
+              J'ai notamment participé à la création de <strong>Mimesis Museum</strong>, un jeu réalisé avec deux camarades
+              dans le cadre des Trophées NSI. Le projet a remporté le <strong>prix du meilleur projet de Normandie dans la catégorie Terminale</strong>.
+            </p>
+
+            <p>
+              Je continue aujourd'hui à développer mes compétences à travers mes études et différents projets, avec l'envie de découvrir
+              de nouvelles technologies et surtout de continuer à créer des choses qui me plaisent.
+            </p>
           </div>
           
-          <div class="ide-content projects-content">
-            
-            <div id="proj-astro" class="project-pane active">
-              <h3>Astrogame</h3>
-              <p class="comment">/* Jeu interactif développé en Python dans lequel vous devez éviter des météorites.
-                Projet de programmation initié en classe de première générale dans le cadre des trophées NSI */</p>
-              
-              <div class="project-slider" data-index="0">
-                <button class="slider-btn prev" aria-label="Précédent">&#10094;</button>
-                <div class="slides-track">
-                  <img src="img/astrogame1.webp" class="slide active" alt="Astrogame capture 1">
-                  <img src="img/astrogame2.webp" class="slide" alt="Astrogame capture 2">
-                  <img src="img/astrogame3.webp" class="slide" alt="Astrogame capture 3">
-                </div>
-                <button class="slider-btn next" aria-label="Suivant">&#10095;</button>
-                <div class="slider-dots">
-                  <span class="dot active"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                </div>
-              </div>
-
-              <a href="https://github.com/PaulMUNOZ14/Astrogame" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
+          <div class="solid-skills">
+            <h3>Compétences</h3>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">C</span>
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+              <span class="tag">PHP</span>
+              <span class="tag">JavaFX</span>
+              <span class="tag">JUnit</span>
+              <span class="tag">PL/SQL</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Git</span>
             </div>
 
-            <div id="proj-mimesis" class="project-pane">
-              <h3>Mimesis</h3>
-              <p class="comment">/* Jeu interactif développé en Python dans lequel vous devez tester la sécurité d'un musée.
-                Projet de programmation initié en classe de terminale générale dans le cadre des trophées NSI */</p>
-              <p class="comment">/* Et a été nommé meilleur projet de Normandie du concours trophées NSI dans la catégorie terminale*/</p>
-              
-              <div class="project-slider" data-index="0">
-                <button class="slider-btn prev" aria-label="Précédent">&#10094;</button>
-                <div class="slides-track">
-                  <img src="img/mimesis1.webp" class="slide active" alt="Mimesis capture 1">
-                  <img src="img/mimesis2.webp" class="slide" alt="Mimesis capture 2">
-                  <img src="img/mimesis3.webp" class="slide" alt="Mimesis capture 3">
-                </div>
-                <button class="slider-btn next" aria-label="Suivant">&#10095;</button>
-                <div class="slider-dots">
-                  <span class="dot active"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                </div>
-              </div>
+            <br><br>
+            <h4>Technologies que j'utilise</h4>
+            <br>
 
-              <a href="https://github.com/PaulMUNOZ14/Mimesis" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
+            <div class="skill-icons">
+              <a href="https://skillicons.dev" target="_blank" rel="noopener noreferrer" aria-label="Voir les technologies sur Skillicons">
+                <img src="https://skillicons.dev/icons?i=python,java,c,html,css,js,php,md,mysql,git,vscode,eclipse,idea,windows,linux,arch,ubuntu,github&perline=6" alt="Technologies utilisées" width="300" height="150" loading="lazy" decoding="async">
+              </a>
             </div>
+          </div>
 
-            <div id="proj-gribouille" class="project-pane">
-              <h3>Gribouille</h3>
-              <p class="comment">/* Projet créatif autour du dessin interactif. Projet influencé par Paint */</p>
-              <p class="comment">/* Package généré sous forme d'exécutable Windows (.exe) portable. */</p>
-              
-              <div class="project-slider" data-index="0">
-                <button class="slider-btn prev" aria-label="Précédent">&#10094;</button>
-                <div class="slides-track">
-                  <img src="img/gribouille1.webp" class="slide active" alt="Gribouille capture 1">
-                  <img src="img/gribouille2.webp" class="slide" alt="Gribouille capture 2">
-                  <img src="img/gribouille3.webp" class="slide" alt="Gribouille capture 3">
-                </div>
-                <button class="slider-btn next" aria-label="Suivant">&#10095;</button>
-                <div class="slider-dots">
-                  <span class="dot active"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                </div>
-              </div>
-
-              <a href="https://github.com/PaulMUNOZ14/Gribouille" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
+          <div class="solid-contact">
+            <h3>Travaillons ensemble</h3>
+            <a href="mailto:paul.munoz@etu.unicaen.fr" class="contact-link">paul.munoz@etu.unicaen.fr</a>
+            <a href="tel:0652509335" class="contact-link">06 52 50 93 35</a>
+            <div class="social-links">
+              <a href="https://github.com/PaulMUNOZ14" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/paul-munoz-6b205b3a9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="CV%20Paul%20MUNOZ.pdf" target="_blank" rel="noopener noreferrer">CV</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="projects" class="fullscreen-section ide-bg">
+      <div class="ide-window projects-ide">
+        <div class="ide-header">
+          <div class="ide-controls">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+          </div>
+          <div class="ide-title">Mes_Projets</div>
+          <div class="ide-spacer"></div>
+        </div>
+        
+        <div class="ide-body">
+          <div class="ide-sidebar" role="tablist" aria-label="Liste des projets">
+            <div class="sidebar-title">EXPLORATEUR</div>
+            <button type="button" id="tab-astro" aria-controls="proj-astro" class="sidebar-item active" data-target="proj-astro" role="tab" aria-selected="true">🎮 astrogame.py</button>
+            <button type="button" id="tab-mimesis" aria-controls="proj-mimesis" class="sidebar-item" data-target="proj-mimesis" role="tab" aria-selected="false">🎮 mimesis.py</button>
+            <button type="button" id="tab-gribouille" aria-controls="proj-gribouille" class="sidebar-item" data-target="proj-gribouille" role="tab" aria-selected="false">🎨 gribouille.java</button>
+          </div>
+
+          <div class="ide-editor">
+            <div class="ide-tabs">
+              <div class="tab active" id="active-tab-name">astrogame.py</div>
+            </div>
+            
+            <div class="ide-content projects-content">
+              
+              <div id="proj-astro" class="project-pane active" role="tabpanel" aria-labelledby="tab-astro">
+                <h3>Astrogame</h3>
+                <p class="comment">/* Jeu interactif développé en Python dans lequel vous devez éviter des météorites.
+                  Projet de programmation initié en classe de première générale dans le cadre des trophées NSI */</p>
+                
+                <div class="project-slider" data-index="0">
+                  <button class="slider-btn prev" aria-label="Précédent">&#10094;</button>
+                  <div class="slides-track">
+                    <img src="img/astrogame1.webp"
+                      srcset="img/astrogame1-mobile.webp 576w, img/astrogame1.webp 960w" 
+                      sizes="(max-width: 768px) 300px, 750px"
+                      class="slide active"
+                      alt="Astrogame capture 1"
+                      width="768" height="429"
+                      fetchpriority="high" decoding="async">
+                    <img src="img/astrogame2.webp"
+                      srcset="img/astrogame2-mobile.webp 576w, img/astrogame2.webp 960w" 
+                      sizes="(max-width: 768px) 300px, 750px"
+                      class="slide"
+                      alt="Astrogame capture 2"
+                      width="768" height="429"
+                      loading="lazy" decoding="async">
+                    <img src="img/astrogame3.webp"
+                      srcset="img/astrogame3-mobile.webp 576w, img/astrogame3.webp 960w" 
+                      sizes="(max-width: 768px) 300px, 750px"
+                      class="slide"
+                      alt="Astrogame capture 3"
+                      width="768" height="429"
+                      loading="lazy" decoding="async">
+                  </div>
+                  <button class="slider-btn next" aria-label="Suivant">&#10095;</button>
+                  <div class="slider-dots">
+                    <button type="button" class="dot active" aria-label="Afficher l'image 1" aria-pressed="true"></button>
+                    <button type="button" class="dot" aria-label="Afficher l'image 2" aria-pressed="false"></button>
+                    <button type="button" class="dot" aria-label="Afficher l'image 3" aria-pressed="false"></button>
+                  </div>
+                </div>
+
+                <a href="https://github.com/PaulMUNOZ14/Astrogame" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
+              </div>
+
+              <div id="proj-mimesis" class="project-pane" role="tabpanel" aria-labelledby="tab-mimesis">
+                <h3>Mimesis</h3>
+                <p class="comment">/* Jeu interactif développé en Python dans lequel vous devez tester la sécurité d'un musée.
+                  Projet de programmation initié en classe de terminale générale dans le cadre des trophées NSI */</p>
+                <p class="comment">/* Et a été nommé meilleur projet de Normandie du concours trophées NSI dans la catégorie terminale*/</p>
+                
+                <div class="project-slider" data-index="0">
+                  <button class="slider-btn prev" aria-label="Précédent">&#10094;</button>
+                  <div class="slides-track">
+                    <img src="img/mimesis1.webp"
+                      srcset="img/mimesis1-mobile.webp 576w, img/mimesis1.webp 960w" 
+                      sizes="(max-width: 768px) 300px, 750px"
+                      class="slide active"
+                      alt="Mimesis capture 1"
+                      width="768" height="429"
+                      decoding="async">
+                    <img src="img/mimesis2.webp"
+                      srcset="img/mimesis2-mobile.webp 576w, img/mimesis2.webp 960w" 
+                      sizes="(max-width: 768px) 300px, 750px"
+                      class="slide"
+                      alt="Mimesis capture 2"
+                      width="768" height="429"
+                      loading="lazy" decoding="async">
+                    <img src="img/mimesis3.webp"
+                      srcset="img/mimesis3-mobile.webp 576w, img/mimesis3.webp 960w" 
+                      sizes="(max-width: 768px) 300px, 750px"
+                      class="slide"
+                      alt="Mimesis capture 3"
+                      width="768" height="429"
+                      loading="lazy" decoding="async">
+                  </div>
+                  <button class="slider-btn next" aria-label="Suivant">&#10095;</button>
+                  <div class="slider-dots">
+                    <button type="button" class="dot active" aria-label="Afficher l'image 1" aria-pressed="true"></button>
+                    <button type="button" class="dot" aria-label="Afficher l'image 2" aria-pressed="false"></button>
+                    <button type="button" class="dot" aria-label="Afficher l'image 3" aria-pressed="false"></button>
+                  </div>
+                </div>
+
+                <a href="https://github.com/PaulMUNOZ14/Mimesis" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
+              </div>
+
+              <div id="proj-gribouille" class="project-pane" role="tabpanel" aria-labelledby="tab-gribouille">
+                <h3>Gribouille</h3>
+                <p class="comment">/* Projet créatif autour du dessin interactif. Projet influencé par Paint */</p>
+                <p class="comment">/* Package généré sous forme d'exécutable Windows (.exe) portable. */</p>
+                
+                <div class="project-slider" data-index="0">
+                  <button class="slider-btn prev" aria-label="Précédent">&#10094;</button>
+                  <div class="slides-track">
+                    <img src="img/gribouille1.webp"
+                      srcset="img/gribouille1-mobile.webp 576w, img/gribouille1.webp 960w" 
+                      sizes="(max-width: 768px) 300px, 750px"
+                      class="slide active"
+                      alt="Gribouille capture 1"
+                      width="768" height="429"
+                      decoding="async">
+                    <img src="img/gribouille2.webp"
+                      srcset="img/gribouille2-mobile.webp 576w, img/gribouille2.webp 960w" 
+                      sizes="(max-width: 768px) 300px, 750px"
+                      class="slide"
+                      alt="Gribouille capture 2"
+                      width="768" height="429"
+                      loading="lazy" decoding="async">
+                    <img src="img/gribouille3.webp"
+                      srcset="img/gribouille3-mobile.webp 576w, img/gribouille3.webp 960w" 
+                      sizes="(max-width: 768px) 300px, 750px"
+                      class="slide"
+                      alt="Gribouille capture 3"
+                      width="768" height="429"
+                      loading="lazy" decoding="async">
+                  </div>
+                  <button class="slider-btn next" aria-label="Suivant">&#10095;</button>
+                  <div class="slider-dots">
+                    <button type="button" class="dot active" aria-label="Afficher l'image 1" aria-pressed="true"></button>
+                    <button type="button" class="dot" aria-label="Afficher l'image 2" aria-pressed="false"></button>
+                    <button type="button" class="dot" aria-label="Afficher l'image 3" aria-pressed="false"></button>
+                  </div>
+                </div>
+
+                <a href="https://github.com/PaulMUNOZ14/Gribouille" target="_blank" class="ide-btn">Voir sur GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <span class="footer-code">© 2026 Paul MUNOZ — Tous droits réservés</span>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
