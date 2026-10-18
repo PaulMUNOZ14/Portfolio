@@ -413,16 +413,6 @@ body {
   border: 1px solid #4f9cf9;
 }
 
-/* les 8 trucs aux quatre coins et milieux du rectangle */
-.tl { top: -4px; left: -4px; }
-.tm { top: -4px; left: calc(50% - 3px); }
-.tr { top: -4px; right: -4px; }
-.lm { top: calc(50% - 3px); left: -4px; }
-.rm { top: calc(50% - 3px); right: -4px; }
-.bl { bottom: -4px; left: -4px; }
-.bm { bottom: -4px; left: calc(50% - 3px); }
-.br { bottom: -4px; right: -4px; }
-
 .slider-dots .dot {
   display: flex;
   align-items: center;
@@ -455,6 +445,18 @@ body {
 .slider-btn:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 3px;
+}
+
+.rose{
+  color: #c586c0;
+}
+
+.cyan{
+  color: #9cdcfe;
+}
+
+.jaune{
+  color: #dcdcaa;
 }
 
 @keyframes floatEffect {
