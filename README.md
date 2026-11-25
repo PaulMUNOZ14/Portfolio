@@ -4,7 +4,7 @@ Portfolio personnel de **Paul MUNOZ**, étudiant en deuxième année de **BUT In
 
 Le site présente mon parcours, mes compétences, mes projets et différents moyens de me contacter.
 
-**Portfolio en ligne :** [paulmunoz14.github.io/Portfolio](https://paulmunoz14.github.io/Portfolio/)
+**Portfolio en ligne :** [portfolio.paulmunoz.fr](https://portfolio.paulmunoz.fr/)
 
 ## Contenu
 
